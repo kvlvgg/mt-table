@@ -114,6 +114,8 @@ onMounted(retrieveData);
 </script>
 
 <style module lang="scss">
+@use '@/assets/scss/breakpoints' as *;
+
 .card {
   position: relative;
   width: 320px;
@@ -124,6 +126,13 @@ onMounted(retrieveData);
   background-size: auto 32%;
   background-repeat: no-repeat;
   background-position: top -10px right -10px;
+
+  @include breakpoint-down-md {
+    margin-top: 24px;
+    width: 100%;
+    height: 100vh;
+    padding: 24px;
+  }
 
   .closeButtonContainer {
     height: 60px;
@@ -178,6 +187,10 @@ onMounted(retrieveData);
     bottom: 0;
     transform: translateY(0px);
     transition: transform 0.4s ease-in-out 0s;
+
+    @include breakpoint-down-md {
+      padding: 0 24px;
+    }
 
     &.collapsed {
       transform: translateY(var(--properties-height));

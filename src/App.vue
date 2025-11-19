@@ -62,6 +62,12 @@ function selectChemicalElement(value: { element: ChemicalElementType; el: HTMLDi
   if (value.el) {
     setLines(value.el);
     scrollTo(value.el);
+
+    if (parseInt(getComputedStyle(document.body).width) < 768) {
+      window.setTimeout(() => {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      }, 200);
+    }
   }
 }
 
@@ -78,9 +84,15 @@ useResizeObserver(container, () => {
 </script>
 
 <style module lang="scss">
+@use '@/assets/scss/breakpoints' as *;
+
 .container {
   display: flex;
   padding: 0 24px 24px 24px;
+
+  @include breakpoint-down-md {
+    display: block;
+  }
 }
 
 .mpTable {
