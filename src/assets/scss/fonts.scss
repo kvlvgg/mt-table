@@ -1,0 +1,17 @@
+@mixin font-medium {
+  font-family: 'Outfit-Medium';
+  line-height: 100%;
+  font-weight: 400;
+}
+
+@mixin font-regular {
+  font-family: 'Outfit-Regular';
+  line-height: 100%;
+  font-weight: 400;
+}
+
+@mixin font-extralight {
+  font-family: 'Outfit-ExtraLight';
+  line-height: 100%;
+  font-weight: 400;
+}

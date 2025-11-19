@@ -1,0 +1,48 @@
+:root {
+  --bg-color: #202d36;
+  --text-color: #ebf6f6;
+
+  --reactive-nonmetal: #a6d6d5;
+  --noble-gase: #746498;
+  --alkali-metal: #e69839;
+  --alkali-earth-metal: #e4a827;
+  --metalloid: #9adfc3;
+  --post-transition-metal: #dbe6b1;
+  --transition-metal: #ff3979;
+  --not-defined: #cbd2d1;
+  --lanthanoid: #2fd4da;
+  --actinoid: #ca86c4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+#app {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Outfit-Medium';
+  font-style: normal;
+  src: url('/fonts/Outfit/Outfit-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Outfit-Regular';
+  font-style: normal;
+  src: url('/fonts/Outfit/Outfit-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Outfit-ExtraLight';
+  font-style: normal;
+  src: url('/fonts/Outfit/Outfit-ExtraLight.ttf') format('truetype');
+}
