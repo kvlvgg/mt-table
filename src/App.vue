@@ -34,7 +34,6 @@ import type { ChemicalElement as ChemicalElementType } from '@/types';
 import { elements } from '@/periodic-elements';
 
 import { useLines } from '@/composables/useLines';
-import { useDraggingScroll } from '@/composables/useDraggingScroll';
 import { useInvertWheelBehaviour } from '@/composables/useInvertWheelBehaviour';
 import { useResizeObserver } from '@/composables/useResizeObserver';
 import { usePeriodicNet } from '@/composables/usePeriodicNet';
@@ -50,7 +49,6 @@ const selectedEl = ref<HTMLDivElement | null>(null);
 const selected = ref<ChemicalElementType | null>(null);
 
 const style = useCssModule();
-// const { onMouseDown, onMouseMove, onMouseUp } = useDraggingScroll(mtTable);
 const { onWheel } = useInvertWheelBehaviour(mtTable);
 const { lines, setLines, hideLines } = useLines(style);
 const { net } = usePeriodicNet(elements, selected, style);
