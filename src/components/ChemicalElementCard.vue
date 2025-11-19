@@ -103,7 +103,7 @@ function collapseProperties() {
 }
 
 function retrieveData() {
-  const path = `/p-elements/[Element.${props.element.chemicalSymbol}].json`;
+  const path = `./p-elements/[Element.${props.element.chemicalSymbol}].json`;
   fetch(path)
     .then(x => x.json())
     .then(x => (data.value = x))
