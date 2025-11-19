@@ -130,7 +130,7 @@ onMounted(retrieveData);
   @include breakpoint-down-md {
     margin-top: 24px;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     padding: 24px;
   }
 
