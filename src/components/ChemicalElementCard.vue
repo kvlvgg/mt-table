@@ -14,7 +14,7 @@
       </div>
 
       <div :class="$style.energyLevels">
-        <Text font="regular" size="md" block>117</Text>
+        <Text font="regular" size="md" block>{{ element.atomicNumber }}</Text>
 
         <Text v-for="(lvl, i) in data?.energyLevels ?? []" :key="i" font="regular" size="xs" block>
           {{ lvl }}
@@ -130,7 +130,7 @@ onMounted(retrieveData);
   @include breakpoint-down-md {
     margin-top: 24px;
     width: 100%;
-    height: 100dvh;
+    height: 100svh;
     padding: 24px;
   }
 
